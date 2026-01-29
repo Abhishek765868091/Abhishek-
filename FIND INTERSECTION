@@ -1,0 +1,16 @@
+def find_intersection(list_1:list,list_2:list):
+    if not isinstance(list_1,list) and not isinstance(list_2,list):
+        raise TypeError ("list_1 & list_2 must be integer")
+    empty=[]
+    for num in list_1:
+        if num in list_2 and num not in empty:
+            empty.append(num)
+    return empty
+if __name__ == "__main__":
+    try:
+        list_1=[12,23,34,45,56,67,12]
+        list_2=[12,34,90,87,76]
+        result=find_intersection(list_1,list_2)
+        print(result)
+    except Exception as e:
+        print(e)
