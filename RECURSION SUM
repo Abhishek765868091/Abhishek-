@@ -1,0 +1,15 @@
+def sum_of_list(List:list):
+    if not isinstance(List,list):
+        raise TypeError("input must be list")
+    if len(List)==0:
+        return 0
+    return List[0]+sum_of_list(List[1:])
+if __name__ == "__main__":
+    try:
+        List=[12,23,34,45,34]
+        result=sum_of_list(List)
+        print(result)
+    except TypeError as error:
+        print(error)
+    except Exception as e:
+        print(e)
