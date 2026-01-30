@@ -1,0 +1,27 @@
+def remove_white_space(text:str):
+    if not isinstance(text,str):
+        raise ValueError ("text must be string")
+    
+
+    result=""
+    pre_space=False
+    for char in text.strip():
+        if not char.isspace():
+            result=result+char
+            pre_space=False
+        else:
+            if pre_space==False:
+                result=result+" "
+                pre_space=True
+    return result
+if __name__ == "__main__":
+    try:
+        text="  \n this \t  is \r python  "
+        outcome=remove_white_space(text)
+        print(outcome)
+    except TypeError as error:
+        print(error)
+    except Exception as e:
+        print(e)
+        
+    
