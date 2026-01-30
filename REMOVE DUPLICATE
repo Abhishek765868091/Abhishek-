@@ -1,0 +1,19 @@
+from typing import List,Any 
+def remove_duplicate(List:List[Any]):
+    if not isinstance(List,list):
+        raise TypeError("input must be in a list")
+    if len(List)==0:
+        raise ValuError("input should have two or more element")
+    result=[]
+    for num in list_1:
+        if num not in result:
+            result.append(num)
+    return result
+if __name__ == "__main__":
+    try:
+        List=[12,23,23,12,45,56,12]
+        result=remove_duplicate(List)
+        print(result)
+    except Exception as e:
+        print(e)
+        
