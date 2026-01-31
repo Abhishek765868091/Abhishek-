@@ -1,1 +1,1 @@
-Prime_number_finder(Exception Handling)
+PYTHON INTERVIEW QUESTION
