@@ -1,0 +1,19 @@
+def largest_number(List:list)->int:
+    if not isinstance(List,list):
+        raise TypeError("input must be list")
+    if len(List)==0:
+        raise ValueError("input must have some value")
+    large=List[0]
+    for num in List:
+        if num>large:
+            large=num
+    return large
+if __name__ == "__main__":
+    try:
+        List=[12,23,34,31,78,74]
+        result=largest_number(List)
+        print(result)
+    except (ValueError,TypeError) as error:
+        print(error)
+    except Exception as e:
+        print(e)
