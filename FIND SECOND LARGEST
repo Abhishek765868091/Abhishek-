@@ -1,0 +1,30 @@
+def second_largest(List:list)->int:
+    if not isinstance(List,list):
+        raise TypeError("input must have in a list")
+    if len(List)==0:
+        raise ValueError("length of input must more than two")
+    if List[0]>List[1]:
+        largest=List[0]
+        second=List[1]
+    else:
+        largest=List[1]
+        second=List[0]
+    for curr_num in List[2:]:
+        if curr_num>largest:
+            second=largest
+            largest=curr_num
+        elif curr_num!=largest and curr_num>second:
+            second=curr_num
+    return second
+if __name__=="__main__":
+    try:
+        List=[12,34,67,23,89,554,90]
+        result=second_largest(List)
+        print(f"second largest is {result}")
+    except (TypeError,ValueError) as error:
+        print(error)
+    except Exception as e:
+        print(e)
+        
+    
+        
