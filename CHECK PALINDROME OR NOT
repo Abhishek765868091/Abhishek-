@@ -1,0 +1,15 @@
+def is_palindrome(text:str):
+    if not isinstance(text,str):
+        raise ValueError ("input must be str")
+    rev_char=""
+    cleaned_text=text.strip().lower()
+    for char in cleaned_text:
+        rev_char=char+rev_char
+    return rev_char==cleaned_text
+if __name__=="__main__":
+     try:
+         cleaned_text=input("enter input: ")
+         result=is_palindrome(cleaned_text)
+         print(result)
+     except Exception as e:
+         print(e)
