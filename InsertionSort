@@ -1,0 +1,20 @@
+def InsertionSort(List_1:list):
+    if not isinstance(List_1,list):
+        raise TypeError("input must have in the list")
+    length=len(List_1)
+    for i in range(length):
+        current_num=List_1[i]
+        for j in range(i-1,-1,-1):
+            if List_1[j]>current_num:
+                List_1[j],List_1[j+1]=List_1[j+1],List[j]
+            else:
+                List_1[j+1]=current_num
+    return List_1
+if __name__=="__main__":
+    List_1=[34,12,70,90,45]
+    try:
+        result=InsertionSort(List_1)
+        print(result)
+    except Exception as e:
+        print(e)
+        
