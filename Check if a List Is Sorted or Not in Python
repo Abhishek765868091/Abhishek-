@@ -1,0 +1,18 @@
+def number(num:list):
+ if not isinstance(num,list):
+     raise TypeError("input must be list")
+ for i in range(len(num)-1):
+     if num[i]>num[i+1]:
+         return False
+ else:
+       return True
+if __name__=="__main__":
+    try:
+        num=[12,45,56,67,78]
+        result=number(num)
+        print(result)
+    except TypeError as error:
+        print(error)
+    except Exception as e:
+        print(e)
+        
