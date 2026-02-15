@@ -1,0 +1,11 @@
+def missing_value(sample_list:list):
+    for i in range(0,len(sample_list)-1):
+        if sample_list[i+1]-sample_list[i]!=1:
+            return sample_list[i]+1
+if __name__=="__main__":
+    sample_list=[1,2,3,5]
+    try:
+        result=missing_value(sample_list)
+        print(f"miss value is : {result}")
+    except Exception as e:
+        print(e)
