@@ -1,0 +1,15 @@
+def sum_of_square(n:int)->int:
+    if not isinstance(n,int):
+        raise TypeError ("input must be a integer")
+    if n<1:
+        raise ValueError("input must be positive number")
+    result=n*(n+1)*(2*n+1)//6
+    return result
+if __name__=="__main__":
+    try:
+        n=10
+        print(sum_of_square(n))
+    except (TypeError,ValueError) as error:
+        print(error)
+    except Exception as e:
+        print(e)
