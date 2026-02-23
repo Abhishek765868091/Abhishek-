@@ -1,0 +1,26 @@
+import string
+
+def longest_string_finder(text):
+    text = text.lower()
+    # Remove punctuation
+    pattern = str.maketrans("", "", string.punctuation)
+    clean_text = text.translate(pattern)
+    
+    word_list = clean_text.split()
+    
+    # Find the maximum length
+    max_len = max(len(word) for word in word_list)
+    
+    # Collect all words with that length
+    longest = [word for word in word_list if len(word) == max_len]
+    
+    return longest
+
+if __name__ == "__main__":
+    text = """The old brass clock in the corner ticked with a stubborn rhythm, as if it refused to acknowledge 
+        the rush of the world outside. A faint scent of rain drifted in through the half-open window, 
+        mingling with the aroma of freshly brewed coffee. On the desk, a stack of unopened letters waited patiently, their edges curling with time.
+        Somewhere in the distance, a train’s whistle echoed, carrying with it the promise of journeys yet to be taken."""
+    
+    result = longest_string_finder(text)
+    print(result)
