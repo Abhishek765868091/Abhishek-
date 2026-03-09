@@ -1,0 +1,10 @@
+def flatten_list(nested_list:list):
+    result=[]
+    temp_list=list(nested_list)
+    while temp_list:
+        item=temp_list.pop()
+        if isinstance(item,list):
+            temp_list.extend(item)
+        else:
+            result.append(item)
+    return sorted( result,reverse=False)
