@@ -1,0 +1,16 @@
+def find_pair(number,target):
+    pair=[]
+    for i in range(len(number)):
+        for j in range(i+1,len(number)):
+            if number[i]+number[j]==target:
+                pair.append((number[i],number[j]))
+    return pair
+if __name__ == "__main__":
+    try:
+        number=[0,1,2,3,4,5,6,7]
+        target=7
+        result=find_pair(number,target)
+        print(result)
+    except Exception as e:
+        print(error)
+        
