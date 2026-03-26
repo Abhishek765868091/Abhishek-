@@ -1,0 +1,13 @@
+def List_To_Dict(data):
+    my_dict={}
+    for key,value in data:
+        my_dict[key]=value
+    return my_dict
+if __name__=="__main__":
+    try:
+
+        data=[('a',1),('b',2),('c',3)]
+        result=List_To_Dict(data)
+        print(result)
+    except Exception as e:
+        print(error)
