@@ -1,0 +1,11 @@
+def sort_by_value(Data):
+    if not isinstance(Data,dict):
+        raise TypeError("input must ne dictionary")
+    return sorted(Data.items(), key=lambda x:x[1])
+if __name__=="__main__":
+    try:
+        Data={'b':2,'c':3,'a':1}
+        result=sort_by_value(Data)
+        print(result)
+    except Exception as e:
+        print(error)
