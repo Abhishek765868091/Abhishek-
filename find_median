@@ -1,0 +1,15 @@
+def find_median(num_list):
+    num_list.sort()
+    num_length=len(num_list)
+    mid=num_length//2
+    if num_length%2!=0:
+        return (num_list[mid])
+    else:
+        return ((num_list[mid-1]+num_list[mid])/2)
+if __name__=="__main__":
+    try:
+        num_list=[1,2,3,4,5]
+        result=find_median(num_list)
+        print(result)
+    except Exception as e:
+        print(error)
